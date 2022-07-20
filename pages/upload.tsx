@@ -7,13 +7,40 @@ import axios from "axios";
 import useAuthStore from "../store/authStore";
 import { client } from "../utils/client";
 
-// import { SanityAssetDocument } from "@sanity/client";
+import { SanityAssetDocument } from "@sanity/client";
 
 // import { topics } from "../utils/constants";
 
 const Upload = () => {
-  const [isLoading, setIsLoading] = useState<Boolean>(false);
-  const [videoAsset, setVideoAsset] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [videoAsset, setVideoAsset] = useState<
+    SanityAssetDocument | undefined
+  >();
+  const [wrongFileType, setWrongFileType] = useState(false);
+
+  const uploadVideo = async (e: any) => {
+    const selectedFile = e.target.files[0];
+    const fileTypes = ["video/mp4", "video/webm", "video/ogg"];
+
+    // uploading asset to sanity
+    if (fileTypes.includes(selectedFile.type)) {
+      //   setWrongFileType(false);
+      //   setIsLoading(true);
+
+      client.assets
+        .upload("file", selectedFile, {
+          contentType: selectedFile.type,
+          filename: selectedFile.name,
+        })
+        .then((data) => {
+          setVideoAsset(data);
+          setIsLoading(false);
+        });
+    } else {
+      setIsLoading(false);
+      setWrongFileType(true);
+    }
+  };
 
   return (
     <div className="flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center">
@@ -31,7 +58,24 @@ const Upload = () => {
             ) : (
               <div>
                 {videoAsset ? (
-                  <div></div>
+                  <div className=" rounded-3xl w-[300px]  p-4 flex flex-col gap-6 justify-center items-center">
+                    <video
+                      className="rounded-xl h-[462px] mt-16 bg-black"
+                      controls
+                      loop
+                      src={videoAsset?.url}
+                    />
+                    <div className=" flex justify-between gap-20">
+                      <p className="text-lg">{videoAsset.originalFilename}</p>
+                      <button
+                        type="button"
+                        className=" rounded-full bg-gray-200 text-purple-400 p-2 text-xl cursor-pointer outline-none hover:shadow-md transition-all duration-500 ease-in-out"
+                        onClick={() => setVideoAsset(undefined)}
+                      >
+                        <MdDelete />
+                      </button>
+                    </div>
+                  </div>
                 ) : (
                   <label className="cursor-pointer">
                     <div className="flex flex-col items-center justify-center h-full">
@@ -63,7 +107,15 @@ const Upload = () => {
                 )}
               </div>
             )}
+
+            {wrongFileType && (
+              <p className="text-center text-xl text-purple-400 font-semibold mt-4 w-[260px]">
+                Please select an video file (mp4 or webm or ogg)
+              </p>
+            )}
           </div>
+
+          
         </div>
       </div>
     </div>
