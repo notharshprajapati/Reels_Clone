@@ -1,0 +1,63 @@
+<mxfile host="app.diagrams.net" modified="2022-07-20T07:23:21.800Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" etag="Xv6AekaJAPzuCm8-pvNa" version="20.1.2" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="385" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="vwuLNTHrMljWah_JWP0g-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vwuLNTHrMljWah_JWP0g-1" target="vwuLNTHrMljWah_JWP0g-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="213" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.031;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="vwuLNTHrMljWah_JWP0g-1" target="vwuLNTHrMljWah_JWP0g-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="457" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-1" value="_App" style="swimlane;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="130" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-4" value="{...pageProps}" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-1">
+          <mxGeometry x="5" y="120" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-3" value="Sidebar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-1">
+          <mxGeometry x="25" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-2" value="NavBar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-1">
+          <mxGeometry x="25" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-5" value="Sidebar" style="swimlane;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="340" width="125" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-6" value="SuggestedAccounts" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-5">
+          <mxGeometry x="-2.5" y="120" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-7" value="Discover" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-5">
+          <mxGeometry x="25" y="80" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-8" value="&quot;Logic&quot;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-5">
+          <mxGeometry x="30" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-10" value="Footer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-5">
+          <mxGeometry x="35" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-11" value="Index" style="swimlane;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="340" width="110" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-12" value="{...pageProps}" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-11">
+          <mxGeometry x="5" y="120" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-13" value="Sidebar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-11">
+          <mxGeometry x="25" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vwuLNTHrMljWah_JWP0g-14" value="NavBar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="vwuLNTHrMljWah_JWP0g-11">
+          <mxGeometry x="25" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
